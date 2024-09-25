@@ -21,20 +21,20 @@ export default function Contact() {
             <FaEnvelope className="w-8 h-8" />
           </a>
           <a
-            href="https://github.com/jackson-07"
-            className="text-gray-600 hover:text-blue-500 transition duration-300"
-            title="GitHub"
-            target="_blank"
-            rel="noopener noreferrer">
-            <FaGithub className="w-8 h-8" />
-          </a>
-          <a
             href="https://www.linkedin.com/in/jackson-raymond07/"
             className="text-gray-600 hover:text-blue-500 transition duration-300"
             title="LinkedIn"
             target="_blank"
             rel="noopener noreferrer">
             <FaLinkedin className="w-8 h-8" />
+          </a>
+          <a
+            href="https://github.com/jackson-07"
+            className="text-gray-600 hover:text-blue-500 transition duration-300"
+            title="GitHub"
+            target="_blank"
+            rel="noopener noreferrer">
+            <FaGithub className="w-8 h-8" />
           </a>
           <a
             href="https://medium.com/@jackson.raymond07"
