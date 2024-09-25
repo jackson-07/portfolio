@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { FaJs, FaPython, FaDatabase, FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
 import { SiExpress, SiDjango, SiMongodb } from "react-icons/si";
 import { FiGlobe } from "react-icons/fi";

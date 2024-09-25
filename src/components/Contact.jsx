@@ -1,5 +1,17 @@
-import React from 'react';
 import { FaGithub, FaLinkedin, FaMedium, FaEnvelope } from "react-icons/fa";
+
+const ContactIcon = ({ Icon, title, link }) => (
+  <a
+    href={link}
+    className="flex flex-col items-center group cursor-pointer"
+    title={title}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <Icon className="w-8 h-8 text-gray-600 group-hover:text-blue-500 transition-colors duration-300" />
+    <span className="text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{title}</span>
+  </a>
+);
 
 export default function Contact() {
   return (
@@ -11,39 +23,28 @@ export default function Contact() {
         <p className="text-xl text-gray-700 mb-8">
           Feel free to reach out to me through any of these platforms
         </p>
-        <div className="flex justify-center space-x-6">
-          <a
-            href="mailto:jackson.raymond07@gmail.com"
-            className="text-gray-600 hover:text-blue-500 transition duration-300"
+        
+        <div className="flex justify-center space-x-12">
+          <ContactIcon
+            Icon={FaEnvelope}
             title="Email"
-            target="_blank"
-            rel="noopener noreferrer">
-            <FaEnvelope className="w-8 h-8" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/jackson-raymond07/"
-            className="text-gray-600 hover:text-blue-500 transition duration-300"
+            link="mailto:jackson.raymond07@gmail.com"
+          />
+          <ContactIcon
+            Icon={FaLinkedin}
             title="LinkedIn"
-            target="_blank"
-            rel="noopener noreferrer">
-            <FaLinkedin className="w-8 h-8" />
-          </a>
-          <a
-            href="https://github.com/jackson-07"
-            className="text-gray-600 hover:text-blue-500 transition duration-300"
+            link="https://www.linkedin.com/in/jackson-raymond07/"
+          />
+          <ContactIcon
+            Icon={FaGithub}
             title="GitHub"
-            target="_blank"
-            rel="noopener noreferrer">
-            <FaGithub className="w-8 h-8" />
-          </a>
-          <a
-            href="https://medium.com/@jackson.raymond07"
-            className="text-gray-600 hover:text-blue-500 transition duration-300"
+            link="https://github.com/jackson-07"
+          />
+          <ContactIcon
+            Icon={FaMedium}
             title="Medium"
-            target="_blank"
-            rel="noopener noreferrer">
-            <FaMedium className="w-8 h-8" />
-          </a>
+            link="https://medium.com/@jackson.raymond07"
+          />
         </div>
       </div>
     </section>
