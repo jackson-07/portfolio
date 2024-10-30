@@ -31,8 +31,7 @@ export default function Hero() {
                 />
                 <div className="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg">
                   <div className="text-sm font-medium text-gray-900">Currently working on</div>
-                  <div className="text-sm text-gray-600">Portfolio 2.0</div>
-                  <div className="text-sm text-gray-600">Thane 1.0</div>
+                  <div className="text-sm text-gray-600">Thane v1.0</div>
                 </div>
               </div>
             </div>
