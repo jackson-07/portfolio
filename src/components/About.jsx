@@ -82,10 +82,10 @@ export default function About() {
               liveLink="https://jackson-07.github.io/codle/"
             />
             <ProjectCard
-              title="Pokédex"
-              description="A Pokémon application allowing users to sign in using Google Auth and fetching JSON data from the PokéAPI to create lineups for in-game battle."
-              githubLink="https://github.com/jackson-07/pokedex"
-              liveLink="https://pokedex-9b5t.onrender.com/"
+              title="Thane"
+              description="A Visual Studio Code extension for developer productivity."
+              githubLink="https://github.com/jackson-07/thane"
+              liveLink="https://github.com/jackson-07/thane"
             />
             <ProjectCard
               title="Invinity"
