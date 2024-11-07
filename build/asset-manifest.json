@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.82f8b6cc.css",
-    "main.js": "/static/js/main.7c359341.js",
+    "main.css": "/static/css/main.39dc3aee.css",
+    "main.js": "/static/js/main.66cab83c.js",
     "static/media/Jackson Raymond-2.jpg": "/static/media/Jackson Raymond-2.32744d771db918a3c038.jpg",
     "index.html": "/index.html",
-    "main.82f8b6cc.css.map": "/static/css/main.82f8b6cc.css.map",
-    "main.7c359341.js.map": "/static/js/main.7c359341.js.map"
+    "main.39dc3aee.css.map": "/static/css/main.39dc3aee.css.map",
+    "main.66cab83c.js.map": "/static/js/main.66cab83c.js.map"
   },
   "entrypoints": [
-    "static/css/main.82f8b6cc.css",
-    "static/js/main.7c359341.js"
+    "static/css/main.39dc3aee.css",
+    "static/js/main.66cab83c.js"
   ]
 }
