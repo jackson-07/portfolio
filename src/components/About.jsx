@@ -1,12 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Terminal } from 'lucide-react';
 import { FaJs, FaPython, FaDatabase, FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
-import { SiExpress, SiDjango, SiMongodb } from "react-icons/si";
+import { SiTypescript, SiExpress, SiDjango, SiMongodb } from "react-icons/si";
 import { FiGlobe } from "react-icons/fi";
 
 const SkillIcon = ({ Icon, title }) => (
   <div className="flex flex-col items-center group cursor-pointer">
-    <Icon className="w-8 h-8 text-gray-600 group-hover:text-blue-500 transition-colors duration-300" />
+    <Icon 
+      className={`w-8 h-8 text-gray-600 group-hover:text-blue-500 transition-colors duration-300 ${
+        title === "JavaScript" ? "scale-125" : ""
+      }`} 
+    />
     <span className="text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300">{title}</span>
   </div>
 );
@@ -157,6 +161,7 @@ export default function About() {
           </div>
           <div className="flex flex-wrap justify-center gap-8 mb-16">
             <SkillIcon Icon={FaJs} title="JavaScript" />
+            <SkillIcon Icon={SiTypescript} title="TypeScript" />
             <SkillIcon Icon={FaPython} title="Python" />
             <SkillIcon Icon={FaDatabase} title="SQL" />
             <SkillIcon Icon={FaReact} title="React" />
