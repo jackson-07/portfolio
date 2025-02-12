@@ -39,7 +39,7 @@ const storyContent = [
   },
   {
     command: "jackson.getJourney()",
-    response: "As a recruiter, I developed a deep understanding of the tech industry and the skills that make an exceptional engineer. This insight drives my approach to coding."
+    response: "As a recruiter, I have a deep understanding of the tech industry and what makes a great engineer, this brings a unique perspective to coding—blending technical skill with an industry-wide view of excellence."
   },
   {
     command: "jackson.getApproach()",
