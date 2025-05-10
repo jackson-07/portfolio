@@ -5,19 +5,18 @@ import { SiTypescript, SiExpress, SiDjango, SiMongodb } from "react-icons/si";
 import { FiGlobe } from "react-icons/fi";
 
 const SkillIcon = React.memo(({ Icon, title }) => (
-  <div 
+  <div
     className="flex flex-col items-center group cursor-pointer"
     role="button"
     aria-label={`Skill: ${title}`}
     tabIndex={0}
   >
-    <Icon 
-      className={`w-8 h-8 text-gray-600 group-hover:text-blue-500 transition-colors duration-300 ${
-        title === "JavaScript" ? "scale-125" : ""
-      }`} 
+    <Icon
+      className={`w-8 h-8 text-gray-600 group-hover:text-blue-500 transition-colors duration-300 ${title === "JavaScript" ? "scale-125" : ""
+        }`}
       aria-hidden="true"
     />
-    <span 
+    <span
       className="text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
       aria-hidden="true"
     >
@@ -27,7 +26,7 @@ const SkillIcon = React.memo(({ Icon, title }) => (
 ));
 
 const ProjectCard = React.memo(({ title, description, githubLink, liveLink }) => (
-  <div 
+  <div
     className="bg-gray-100 p-4 rounded-lg shadow-md transform transition-all duration-300 hover:scale-105 hover:bg-gray-200 flex flex-col justify-between h-full"
     aria-label={`Project: ${title}`}
   >
@@ -36,25 +35,25 @@ const ProjectCard = React.memo(({ title, description, githubLink, liveLink }) =>
       <p className="text-sm text-gray-600">{description}</p>
     </div>
     <div className="flex space-x-4 mt-4">
-      <a 
-        href={githubLink} 
-        target="_blank" 
+      <a
+        href={githubLink}
+        target="_blank"
         rel="noopener noreferrer"
         aria-label={`${title} GitHub Repository`}
       >
-        <FaGithub 
-          className="w-6 h-6 text-gray-800 hover:text-blue-600" 
+        <FaGithub
+          className="w-6 h-6 text-gray-800 hover:text-blue-600"
           aria-hidden="true"
         />
       </a>
-      <a 
-        href={liveLink} 
-        target="_blank" 
+      <a
+        href={liveLink}
+        target="_blank"
         rel="noopener noreferrer"
         aria-label={`${title} Live Website`}
       >
-        <FiGlobe 
-          className="w-6 h-6 text-gray-800 hover:text-blue-600" 
+        <FiGlobe
+          className="w-6 h-6 text-gray-800 hover:text-blue-600"
           aria-hidden="true"
         />
       </a>
@@ -128,7 +127,7 @@ const MyStory = React.memo(() => {
   }, []);
 
   return (
-    <div 
+    <div
       className="max-w-3xl mx-auto mt-8"
       aria-label="Jackson's Professional Journey"
     >
@@ -138,16 +137,20 @@ const MyStory = React.memo(() => {
           <span className="text-gray-600 font-medium">My Journey</span>
         </div>
 
-        <div 
-          className="bg-gray-50 rounded-lg p-4 mb-4 min-h-[200px] border border-gray-200"
-          aria-live="polite"
-        >
+        <div className="bg-gray-50 rounded-lg p-4 mb-4 min-h-[200px] border border-gray-200">
           <div className="text-gray-600 mb-2 font-medium">
             $ {storyContent[storyPhase].command}
           </div>
-          <div className="text-gray-700">
+
+          {/* Visual version (only seen, not read) */}
+          <div className="text-gray-700" aria-hidden="true">
             {displayedText}
             <span className="animate-pulse text-blue-500">▊</span>
+          </div>
+
+          {/* Screen reader version (only read, not seen) */}
+          <div className="sr-only" aria-live="polite">
+            {isTyping ? 'Content loading...' : storyContent[storyPhase].response}
           </div>
         </div>
 
@@ -157,8 +160,8 @@ const MyStory = React.memo(() => {
             disabled={storyPhase === 0}
             aria-label="Previous story phase"
             className={`px-4 py-2 rounded-lg ${storyPhase === 0
-                ? 'bg-gray-100 text-gray-400'
-                : 'bg-gray-100 hover:bg-gray-200 text-gray-600'
+              ? 'bg-gray-100 text-gray-400'
+              : 'bg-gray-100 hover:bg-gray-200 text-gray-600'
               } transition-colors`}
           >
             Previous
@@ -179,8 +182,8 @@ const MyStory = React.memo(() => {
             disabled={storyPhase === storyContent.length - 1}
             aria-label="Next story phase"
             className={`px-4 py-2 rounded-lg ${storyPhase === storyContent.length - 1
-                ? 'bg-gray-100 text-gray-400'
-                : 'bg-gray-100 hover:bg-gray-200 text-gray-600'
+              ? 'bg-gray-100 text-gray-400'
+              : 'bg-gray-100 hover:bg-gray-200 text-gray-600'
               } transition-colors`}
           >
             Next
@@ -232,21 +235,21 @@ export default function About() {
   ], []);
 
   return (
-    <section 
-      id="about" 
+    <section
+      id="about"
       className="bg-white py-16 sm:py-24"
       aria-labelledby="about-section-title"
     >
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="mb-16">
-            <h2 
-              id="about-section-title" 
+            <h2
+              id="about-section-title"
               className="sr-only"
             >
               About Jackson Raymond
             </h2>
-            <p 
+            <p
               className="text-2xl text-gray-700 mb-8 text-center"
               aria-label="About me summary"
             >
@@ -254,30 +257,30 @@ export default function About() {
             </p>
             <MyStory />
           </div>
-          
-          <div 
+
+          <div
             className="flex flex-wrap justify-center gap-8 mb-16"
             role="list"
             aria-label="Technical Skills"
           >
             {skills.map(({ Icon, title }) => (
-              <SkillIcon 
-                key={title} 
-                Icon={Icon} 
-                title={title} 
+              <SkillIcon
+                key={title}
+                Icon={Icon}
+                title={title}
               />
             ))}
           </div>
-          
-          <div 
+
+          <div
             className="grid grid-cols-1 md:grid-cols-2 gap-6"
             role="list"
             aria-label="Project Showcase"
           >
             {projects.map((project) => (
-              <ProjectCard 
+              <ProjectCard
                 key={project.title}
-                {...project} 
+                {...project}
               />
             ))}
           </div>
