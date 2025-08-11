@@ -1,29 +1,8 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Terminal } from 'lucide-react';
-import { FaJs, FaPython, FaDatabase, FaReact, FaNodeJs, FaGithub } from "react-icons/fa";
-import { SiTypescript, SiExpress, SiDjango, SiMongodb } from "react-icons/si";
 import { FiGlobe } from "react-icons/fi";
+import { FaGithub} from 'react-icons/fa';
 
-const SkillIcon = React.memo(({ Icon, title }) => (
-  <div
-    className="flex flex-col items-center group cursor-pointer"
-    role="button"
-    aria-label={`Skill: ${title}`}
-    tabIndex={0}
-  >
-    <Icon
-      className={`w-8 h-8 text-gray-600 group-hover:text-blue-500 transition-colors duration-300 ${title === "JavaScript" ? "scale-125" : ""
-        }`}
-      aria-hidden="true"
-    />
-    <span
-      className="text-xs mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-      aria-hidden="true"
-    >
-      {title}
-    </span>
-  </div>
-));
 
 const ProjectCard = React.memo(({ title, description, githubLink, liveLink }) => (
   <div
@@ -65,19 +44,19 @@ const MyStory = React.memo(() => {
   const storyContent = useMemo(() => [
     {
       command: "jackson.getCurrent()",
-      response: "I'm a Frontend focussed Sofware Engineer with a background in Technical Recruiting."
+      response: "I'm a former technical recruiter, looking to break into the world of products and technology."
     },
     {
       command: "jackson.getJourney()",
-      response: "As a recruiter, I have a deep understanding of what makes a great engineer, this forms my unique perspective to coding, by blending technical skill with an industry-wide view of excellence."
+      response: "For over seven years I've been working alongside Software Engineers, Engineering Managers and Product Managers to solve complex business problems. Having recently completed a formal education I am transitioning to become a part of the industry."
     },
     {
       command: "jackson.getApproach()",
-      response: "With this understanding of both the technical and human aspects of software development, I strive to create clean, accessible and performant applications."
+      response: "With my understanding of both the technical and human aspects of software and product, I strive to create clean, accessible and performant applications."
     },
     {
       command: "jackson.getWork()",
-      response: "Take a look at my skills and projects below!"
+      response: "Take a look at my projects below!"
     }
   ], []);
 
@@ -195,42 +174,19 @@ const MyStory = React.memo(() => {
 });
 
 export default function About() {
-  const skills = useMemo(() => [
-    { Icon: FaJs, title: "JavaScript" },
-    { Icon: SiTypescript, title: "TypeScript" },
-    { Icon: FaPython, title: "Python" },
-    { Icon: FaDatabase, title: "SQL" },
-    { Icon: FaReact, title: "React" },
-    { Icon: FaNodeJs, title: "Node.js" },
-    { Icon: SiExpress, title: "Express" },
-    { Icon: SiDjango, title: "Django" },
-    { Icon: SiMongodb, title: "MongoDB" }
-  ], []);
 
   const projects = useMemo(() => [
     {
       title: "iPatrol",
-      description: "An application with CRUD functionality designed to streamline patrol management and incident reporting for surf lifesavers.",
+      description: "An application with CRUD functionality designed to streamline patrol management and incident reporting for surf lifesavers built in React.",
       githubLink: "https://github.com/jackson-07/ipatrol",
       liveLink: "https://ipatrol.onrender.com/"
-    },
-    {
-      title: "Invinity",
-      description: "An Inventory Management System with CRUD functionality allowing users to create an account, track, search and categorise their inventory.",
-      githubLink: "https://github.com/MartyEternal/inventorymanager",
-      liveLink: "https://inventorymanager-78zc.onrender.com/"
     },
     {
       title: "Thane",
       description: "A Visual Studio Code extension for developer productivity written in TypeScript and Webpack.",
       githubLink: "https://github.com/jackson-07/thane",
       liveLink: "https://github.com/jackson-07/thane"
-    },
-    {
-      title: "Codle",
-      description: "A clone of the online game Wordle using vanilla HTML, CSS and JavaScript and an MVC architecture.",
-      githubLink: "https://github.com/jackson-07/codle",
-      liveLink: "https://jackson-07.github.io/codle/"
     }
   ], []);
 
@@ -253,23 +209,9 @@ export default function About() {
               className="text-2xl text-gray-700 mb-8 text-center"
               aria-label="About me summary"
             >
-              Hello, I'm Jackson, a Technical Recruiter turned Software Engineer with a passion for technology and people.
+              My name is Jackson and I like to build products and apps.
             </p>
             <MyStory />
-          </div>
-
-          <div
-            className="flex flex-wrap justify-center gap-8 mb-16"
-            role="list"
-            aria-label="Technical Skills"
-          >
-            {skills.map(({ Icon, title }) => (
-              <SkillIcon
-                key={title}
-                Icon={Icon}
-                title={title}
-              />
-            ))}
           </div>
 
           <div

@@ -1,7 +1,7 @@
 import profilePic from "../assets/Jackson Raymond-2-compressed.jpg";
 
 export default function Hero() {
-  const technologies = ["React", "JavaScript", "TypeScript", "Node.js"];
+  const roles = ["Product Manager","Software Engineer", "Writer"];
 
   return (
     <section 
@@ -19,25 +19,18 @@ export default function Hero() {
                 >
                   Jackson Raymond
                 </h1>
-                <p 
-                  className="text-xl sm:text-2xl text-gray-600"
-                  aria-label="Professional Role"
-                >
-                  Software Engineer
-                </p>
-                
                 <div 
                   className="flex gap-4 flex-wrap justify-center md:justify-start"
                   role="list" 
                   aria-label="Technologies"
                 >
-                  {technologies.map((tech) => (
+                  {roles.map((role) => (
                     <span 
-                      key={tech} 
+                      key={role} 
                       role="listitem"
                       className="px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm"
                     >
-                      {tech}
+                      {role}
                     </span>
                   ))}
                 </div>
