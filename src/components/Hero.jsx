@@ -13,16 +13,14 @@ export default function Hero() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-12">
             <div className="md:w-1/2 text-center md:text-left">
               <div className="space-y-6">
-                <h1 
-                  id="hero-title" 
-                  className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900"
-                >
+                <h1 id="hero-title" className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900">
                   Jackson Raymond
                 </h1>
+                
                 <div 
                   className="flex gap-4 flex-wrap justify-center md:justify-start"
                   role="list" 
-                  aria-label="Technologies"
+                  aria-label="Roles"
                 >
                   {roles.map((role) => (
                     <span 
@@ -34,6 +32,7 @@ export default function Hero() {
                     </span>
                   ))}
                 </div>
+
               </div>
             </div>
 

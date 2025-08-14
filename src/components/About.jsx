@@ -13,6 +13,7 @@ const ProjectCard = React.memo(({ title, description, githubLink, liveLink }) =>
       <h3 className="text-xl font-semibold text-gray-800 mb-2">{title}</h3>
       <p className="text-sm text-gray-600">{description}</p>
     </div>
+
     <div className="flex space-x-4 mt-4">
       <a
         href={githubLink}
@@ -37,6 +38,7 @@ const ProjectCard = React.memo(({ title, description, githubLink, liveLink }) =>
         />
       </a>
     </div>
+
   </div>
 ));
 
@@ -209,7 +211,7 @@ export default function About() {
               className="text-2xl text-gray-700 mb-8 text-center"
               aria-label="About me summary"
             >
-              My name is Jackson and I like to build products and apps.
+              I build, I code, I write.
             </p>
             <MyStory />
           </div>
