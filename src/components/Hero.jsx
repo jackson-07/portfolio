@@ -1,7 +1,7 @@
 import profilePic from "../assets/Jackson Raymond-2-compressed.jpg";
 
 export default function Hero() {
-  const roles = ["Product Manager","Software Engineer", "Writer"];
+  const roles = ["Software Developer", "Product Manager", "Occasional Writer"];
 
   return (
     <section 

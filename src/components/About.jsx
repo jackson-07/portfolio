@@ -50,11 +50,11 @@ const MyStory = React.memo(() => {
     },
     {
       command: "jackson.getJourney()",
-      response: "For over seven years I've been working alongside Software Engineers, Engineering Managers and Product Managers to solve complex business problems. Having recently completed a formal education I am transitioning to become a part of the industry."
+      response: "For over seven years I've been working alongside Engineering Managers and Product Leaders to solve complex business problems. Having recently completed a formal education I am transitioning to become a part of the industry."
     },
     {
       command: "jackson.getApproach()",
-      response: "With my understanding of both the technical and human aspects of software and product, I strive to create clean, accessible and performant applications."
+      response: "As someone who thinks the internet has generally been a bad idea so far. I love making clean, accessible and performant applications that minimize the harm the internet does to the planet and people."
     },
     {
       command: "jackson.getWork()",
