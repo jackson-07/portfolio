@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      Nunito: ["Nunito"]
+      Inter: ['Inter', 'ui-sans-serif', 'system-ui']
     }
   },
   plugins: [],

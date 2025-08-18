@@ -1,10 +1,11 @@
 import profilePic from "../assets/Jackson Raymond-2-compressed.jpg";
 
 export default function Hero() {
-  const roles = ["Software Developer", "Product Manager", "Occasional Writer"];
+  const roles = ["Software Developer", "Product Manager"];
+  const hobby = "Occasional Writer";
 
   return (
-    <section 
+    <section
       className="bg-gradient-to-b from-gray-50 to-gray-100"
       aria-labelledby="hero-title"
     >
@@ -16,21 +17,29 @@ export default function Hero() {
                 <h1 id="hero-title" className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900">
                   Jackson Raymond
                 </h1>
-                
-                <div 
-                  className="flex gap-4 flex-wrap justify-center md:justify-start"
-                  role="list" 
-                  aria-label="Roles"
-                >
-                  {roles.map((role) => (
-                    <span 
-                      key={role} 
-                      role="listitem"
-                      className="px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm"
-                    >
-                      {role}
+
+                <div className="space-y-3">
+                  <div
+                    className="flex gap-4 flex-wrap justify-center md:justify-start"
+                    role="list"
+                    aria-label="Primary roles"
+                  >
+                    {roles.map((role) => (
+                      <span
+                        key={role}
+                        role="listitem"
+                        className="px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm"
+                      >
+                        {role}
+                      </span>
+                    ))}
+                  </div>
+
+                  <div className="flex justify-center md:justify-start">
+                    <span className="px-4 py-2 bg-white rounded-full text-sm text-gray-600 shadow-sm">
+                      {hobby}
                     </span>
-                  ))}
+                  </div>
                 </div>
 
               </div>
@@ -46,8 +55,8 @@ export default function Hero() {
                   height={384}
                   className="rounded-lg w-72 h-72 md:w-96 md:h-96 object-cover shadow-xl"
                 />
-                
-                <div 
+
+                <div
                   className="absolute -bottom-4 -right-4 bg-white p-4 rounded-lg shadow-lg"
                   aria-label="Current Project"
                 >

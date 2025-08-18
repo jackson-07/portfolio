@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
 import { Terminal } from 'lucide-react';
 import { FiGlobe } from "react-icons/fi";
-import { FaGithub} from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 
 
 const ProjectCard = React.memo(({ title, description, githubLink, liveLink }) => (
@@ -211,7 +211,7 @@ export default function About() {
               className="text-2xl text-gray-700 mb-8 text-center"
               aria-label="About me summary"
             >
-              I build, I code, I write.
+              I code, I build, I write.
             </p>
             <MyStory />
           </div>
